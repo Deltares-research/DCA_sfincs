@@ -1,0 +1,47 @@
+meta:
+  root: p:/11209905-dca-sfincs-river/00_data
+  version: 2022.7
+DEM_5x5m:
+  crs: 25832
+  data_type: RasterDataset
+  driver: raster
+  kwargs:
+    chunks:
+      x: 10
+      y: 10
+  meta:
+    category: topography
+  path: DEM/kolding_DHM_5x5_2022.tif
+DEM_high_res:
+  crs: 25832
+  data_type: RasterDataset
+  driver: raster
+  kwargs:
+    chunks:
+      x: 100
+      y: 100
+  meta:
+    category: topography
+  path: DEM/high_resolution_kolding/DEM_high_res.vrt
+manning_roughness_5x5m:
+  crs: 25832
+  data_type: RasterDataset
+  driver: raster
+  kwargs:
+    chunks:
+      x: 10
+      y: 10
+  meta:
+    category: land_cover
+  path: manning_roughness/kolding_manning_5x5_2022.tif
+Bathymetry_50x50m:
+  crs: 25832
+  data_type: RasterDataset
+  driver: raster
+  kwargs:
+    chunks:
+      x: 10
+      y: 10
+  meta:
+    category: topography
+  path: DEM/denmark_ddm_50m_2022.tif

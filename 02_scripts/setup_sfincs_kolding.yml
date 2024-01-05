@@ -1,0 +1,52 @@
+global:
+  data_libs: ["./input/local_data.yml", "deltares_data"]
+
+setup_config:
+  tref: 20161001 000000
+  tstart: 20161007 000000
+  tstop: 20161009 000000
+  dtout: 3600
+  dthisout: 600
+
+setup_grid_from_region:
+  res: 100                   
+  crs: utm
+  rotated: false
+  
+setup_dep:
+  datasets_dep:
+    - elevtn: DEM_high_res
+    - elevtn: DEM_5x5m
+    - elevtn: Bathymetry_50x50m
+
+setup_mask_active:
+  mask: input/sfincs_domain.geojson
+  zmin: -5
+  fill_area: 10
+
+setup_mask_bounds:
+  btype: waterlevel
+  zmax: -2
+  
+setup_manning_roughness:
+  datasets_rgh:
+      - manning: manning_roughness_5x5m
+
+setup_cn_infiltration:
+  cn: gcn250
+  antecedent_moisture: avg
+
+setup_subgrid:
+  datasets_dep:
+    - elevtn: DEM_high_res
+    - elevtn: DEM_5x5m
+    - elevtn: Bathymetry_50x50m
+  datasets_rgh:
+    - manning: manning_roughness_5x5m
+  write_dep_tif: true
+  nr_subgrid_pixels: 100 # 5 m
+  nbins: 10
+
+plot_basemap:
+  fn_out: basemap.png
+
