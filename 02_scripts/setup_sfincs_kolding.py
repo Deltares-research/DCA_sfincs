@@ -13,15 +13,14 @@ from hydromt.log import setuplog
 from hydromt_sfincs import SfincsModel
 
 # %%
-root = r'p:\11209905-dca-sfincs-river'
-sfincs_root = r"p:\11209905-dca-sfincs-river\01_models\KoldingA"
+sfincs_root = r"p:\11209905-dca-sfincs-river\01_models\KoldingA_05m"
 
 logger = setuplog("update", "./hydromt.log", log_level=10)
-yml_file = join(root, "02_scripts", "setup_sfincs_kolding.yml")
+yml_file = join("setup_sfincs_kolding.yml")
 opt = configread(yml_file, abs_path=True)  # read settings from ini file
 kwargs = opt.pop("global", {})
 
-region_fn = join(root, "02_scripts", "input", "sfincs_domain.geojson")
+region_fn = join("input", "sfincs_domain.geojson")
 
 # %%
 mod = SfincsModel(root=sfincs_root, mode="w+", logger=logger, **kwargs)

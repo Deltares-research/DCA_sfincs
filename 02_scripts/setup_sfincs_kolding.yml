@@ -1,5 +1,5 @@
 global:
-  data_libs: ["./input/local_data.yml", "deltares_data"]
+  data_libs: ["./input/local_data.yml"]
 
 setup_config:
   tref: 20161001 000000
@@ -44,7 +44,7 @@ setup_subgrid:
   datasets_rgh:
     - manning: manning_roughness_5x5m
   write_dep_tif: true
-  nr_subgrid_pixels: 100 # 5 m
+  nr_subgrid_pixels: 200 # 5 m
   nbins: 10
 
 plot_basemap:
