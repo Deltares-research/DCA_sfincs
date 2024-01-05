@@ -45,3 +45,10 @@ Bathymetry_50x50m:
   meta:
     category: topography
   path: DEM/denmark_ddm_50m_2022.tif
+river_lines_kolding: 
+    crs: 25832
+    data_type: GeoDataFrame
+    driver: vector
+    meta:
+      category: hydrography
+    path: geometries/riverlines_kolding_area_prepared.geojson

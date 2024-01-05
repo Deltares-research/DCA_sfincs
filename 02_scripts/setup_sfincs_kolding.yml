@@ -1,5 +1,5 @@
 global:
-  data_libs: ["./input/local_data.yml", "deltares_data"]
+  data_libs: ["./input/local_data.yml"]
 
 setup_config:
   tref: 20161001 000000
@@ -36,6 +36,9 @@ setup_cn_infiltration:
   cn: gcn250
   antecedent_moisture: avg
 
+setup_river_inflow:
+  rivers: river_lines_kolding
+  
 setup_subgrid:
   datasets_dep:
     - elevtn: DEM_high_res
@@ -43,8 +46,12 @@ setup_subgrid:
     - elevtn: Bathymetry_50x50m
   datasets_rgh:
     - manning: manning_roughness_5x5m
+  datasets_riv:
+    - centerlines: river_lines_kolding
+      rivdph: 1
+      manning: 0.035
   write_dep_tif: true
-  nr_subgrid_pixels: 100 # 5 m
+  nr_subgrid_pixels: 200 # 5 m
   nbins: 10
 
 plot_basemap:
