@@ -1,5 +1,5 @@
 global:
-  data_libs: ["./input/local_data.yml"]
+  data_libs: ["./input/local_data.yml", 'deltares_data']
 
 setup_config:
   tref: 20161001 000000
@@ -38,6 +38,7 @@ setup_cn_infiltration:
 
 setup_river_inflow:
   rivers: river_lines_kolding
+  keep_rivers_geom : True
   
 setup_subgrid:
   datasets_dep:
