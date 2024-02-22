@@ -9,18 +9,19 @@ setup_config:
   dthisout: 600
 
 setup_grid_from_region:
-  res: 100                
+  res: 100                   
   crs: utm
   rotated: false
   
 setup_dep:
   datasets_dep:
+    - elevtn: DEM_high_res
     - elevtn: DEM_5x5m
     - elevtn: Bathymetry_50x50m
 
 setup_mask_active:
   mask: input/sfincs_domain.geojson
-  zmin: -20
+  zmin: -5
   fill_area: 10
 
 setup_mask_bounds:
@@ -35,14 +36,13 @@ setup_cn_infiltration:
   cn: gcn250
   antecedent_moisture: avg
 
-setup_discharge:
-  timeseries: river_discharges
-  locations : river_discharge_locations
+setup_river_inflow:
+  rivers: river_lines_kolding
+  keep_rivers_geom : True
   
 setup_subgrid:
   datasets_dep:
     - elevtn: DEM_high_res
-      zmin: 0
     - elevtn: DEM_5x5m
     - elevtn: Bathymetry_50x50m
   datasets_rgh:
@@ -53,7 +53,7 @@ setup_subgrid:
       rivdph: 1
       manning: 0.035
   write_dep_tif: true
-  nr_subgrid_pixels: 20 # 5 m
+  nr_subgrid_pixels: 200 # 5 m
   nbins: 10
 
 plot_basemap:
