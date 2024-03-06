@@ -14,7 +14,7 @@ from hydromt.log import setuplog
 from hydromt_sfincs import SfincsModel
 
 # %%
-sfincs_root = r"p:\11209905-dca-sfincs-river\01_models\KoldingA_PAK_sbg20"
+sfincs_root = r"p:\11209905-dca-sfincs-river\01_models\KoldingA_PAK_sbg20_waterlevel_bound"
 
 logger = setuplog("update", "./hydromt.log", log_level=10)
 yml_file = join("setup_sfincs_kolding.yml")
@@ -51,6 +51,7 @@ htide= htide + 0.1
 df_bzs = pd.DataFrame(index=timeseries.index, columns= [1], data= htide.values)
 
 mod.setup_waterlevel_forcing(timeseries=df_bzs, locations="waterlevel_locations")
+mod.setup_observation_points(locations = "observation_locations")
 # NOTE: the waterlevel forcing data is now stored in the sf.forcing dictionary
 mod.write()
 # %%

@@ -15,7 +15,7 @@ from hydromt_sfincs import SfincsModel
 
 
 # %%
-sfincs_root = r"p:\11209905-dca-sfincs-river\01_models\KoldingA_PAK_sbg20_waterlevel_bound"
+sfincs_root = r"p:\11209905-dca-sfincs-river\01_models\KoldingA_PAK_sbg20_waterlevel_bound_without_rivers"
 
 logger = setuplog("update", "./hydromt.log", log_level=10)
 working_dir = os.path.abspath(".")

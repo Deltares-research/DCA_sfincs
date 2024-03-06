@@ -79,6 +79,12 @@ waterlevel_locations:
     driver: vector
     path: waterlevels\coordinates.shp
 
+observation_locations:
+    crs: 32632
+    data_type: GeoDataFrame
+    driver: vector
+    path: geometries\observation_points.geojson
+
 timeseries_discharge:
     data_type: DataFrame
     driver: csv
