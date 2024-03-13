@@ -9,7 +9,7 @@ setup_config:
   dthisout: 600
 
 setup_grid_from_region:
-  res: 100                
+  res: 25             
   crs: utm
   rotated: false
   
@@ -34,10 +34,6 @@ setup_manning_roughness:
 setup_cn_infiltration:
   cn: gcn250
   antecedent_moisture: avg
-
-setup_discharge:
-  timeseries: river_discharges
-  locations : river_discharge_locations
   
 setup_subgrid:
   datasets_dep:
@@ -47,13 +43,13 @@ setup_subgrid:
     - elevtn: Bathymetry_50x50m
   datasets_rgh:
     - manning: manning_roughness_5x5m
-  datasets_riv:
-    - centerlines: river_lines_kolding
-      mask: river_edges_kolding
-      rivdph: 1
-      manning: 0.035
+  # datasets_riv:
+  #   - centerlines: river_lines_kolding
+  #     mask: river_edges_kolding
+  #     rivdph: 1
+  #     manning: 0.035
   write_dep_tif: true
-  nr_subgrid_pixels: 20 # 5 m
+  nr_subgrid_pixels: 5 # 5 m
   nbins: 10
 
 plot_basemap:

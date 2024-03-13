@@ -55,7 +55,7 @@ river_lines_kolding:
     driver: vector
     meta:
       category: hydrography
-    path: geometries/riverlines_kolding_area_prepared_without_width.geojson
+    path: geometries/riverlines_kolding_area_prepared_dep3.geojson
 
 
 river_discharges: 

@@ -15,7 +15,7 @@ from hydromt_sfincs import SfincsModel
 root = r"c:\Git_repos\DCA_sfincs"
 sfincs_root = r"p:\11209905-dca-sfincs-river\01_models\KoldingA"
 input_file = r"p:\11209905-dca-sfincs-river\00_data\geometries\old\riverlines_kolding_area_cleaned.geojson"
-output_file = r"p:\11209905-dca-sfincs-river\00_data\geometries\riverlines_kolding_area_prepared_without_width.geojson"
+output_file = r"p:\11209905-dca-sfincs-river\00_data\geometries\riverlines_kolding_area_prepared_dep3.geojson"
 
 rivers = gpd.read_file(input_file)
 
@@ -24,7 +24,7 @@ rivers = gpd.read_file(input_file)
 # rivers["rivwth"].where(rivers["rivwth"] != "Ukendt", 5, inplace=True)
 # rivers["rivwth"].where(rivers["rivwth"] != "12-", 15, inplace=True)
 
-rivers["rivdph"] = 1
+rivers["rivdph"] = 3
 
 # rivers["rivwth"] = rivers["rivwth"].astype(float)
 
