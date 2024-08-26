@@ -58,6 +58,21 @@ river_lines_kolding:
     path: geometries/riverlines_kolding_area_prepared_dep3.geojson
 
 
+river_lines_kolding_single: 
+    crs: 25832
+    data_type: GeoDataFrame
+    driver: vector
+    meta:
+      category: hydrography
+    path: geometries/riverlines_kolding_area_prepared_v2.geojson
+
+riverdepth_points:
+    crs: 25832
+    data_type: GeoDataFrame
+    driver: vector
+    path: vanRie17052024/stationering.shp
+
+
 river_discharges: 
     data_type: DataFrame
     driver: csv
@@ -72,6 +87,13 @@ river_discharge_locations:
     data_type: GeoDataFrame
     driver: vector
     path: Discharge_observations\point_locations_discharge.shp
+
+river_discharge_locations_kolding:
+    crs: 25832
+    data_type: GeoDataFrame
+    driver: vector
+    path: Discharge_observations\point_locations_discharge_kolding.shp
+
 
 waterlevel_locations:
     crs: 25832

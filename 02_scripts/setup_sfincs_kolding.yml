@@ -19,7 +19,7 @@ setup_dep:
     - elevtn: Bathymetry_50x50m
 
 setup_mask_active:
-  mask: input/sfincs_domain.geojson
+  mask: c:/git/DCA_sfincs/02_scripts/input/sfincs_domain_reduced.geojson
   zmin: -20
   fill_area: 10
 
@@ -35,23 +35,38 @@ setup_cn_infiltration:
   cn: gcn250
   antecedent_moisture: avg
   
-setup_subgrid:
-  datasets_dep:
-    - elevtn: DEM_high_res
-      zmin: 0
-    - elevtn: DEM_5x5m
-    - elevtn: Bathymetry_50x50m
-  datasets_rgh:
-    - manning: manning_roughness_5x5m
-  # datasets_riv:
-  #   - centerlines: river_lines_kolding
-  #     mask: river_edges_kolding
-  #     rivdph: 1
-  #     manning: 0.035
-  write_dep_tif: true
-  nr_subgrid_pixels: 5 # 5 m
-  nbins: 10
+# setup_subgrid:
+#   datasets_dep:
+#     - elevtn: DEM_5x5m
+#     - elevtn: Bathymetry_50x50m
+#   datasets_rgh:
+#     - manning: manning_roughness_5x5m
+#   datasets_riv:
+#     - centerlines: river_lines_kolding
+#       mask: river_edges_kolding
+#       rivdph: 3
+#       manning: 0.035
+#   write_dep_tif: true
+#   nr_subgrid_pixels: 5 # 5 m
+#   nbins: 10
 
-plot_basemap:
-  fn_out: basemap.png
+
+# setup_subgrid:
+#   datasets_dep:
+#     - elevtn: DEM_5x5m
+#     - elevtn: Bathymetry_50x50m
+#   datasets_rgh:
+#     - manning: manning_roughness_5x5m
+#   datasets_riv:
+#     - centerlines: river_lines_kolding_single
+#       mask: river_edges_kolding
+#       # rivdph: 3
+#       manning: 0.035
+#       gdf_zb: riverdepth_points
+#   write_dep_tif: true
+#   nr_subgrid_pixels: 5 # 5 m
+#   nbins: 10
+
+# plot_basemap:
+#   fn_out: basemap.png
 

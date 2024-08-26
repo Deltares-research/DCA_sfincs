@@ -59,7 +59,12 @@ df_loc['Date'].to_csv(os.path.join(base_dir, "pre_processed", f"discharge_timese
 
 # %%
 
-
-
+fig, ax = plt.subplots(1,1, figsize = (10,6))
+#df_all = df_all.rename(columns = {df_all.columns[0]:"Kolding aa Ejstrup", df_all.columns[1]:"Seest Molleoe"})
+df_all.plot(ax = ax)
+ax.legend(["Kolding aa Ejstrup", "Seest Molleoe", "Vester nebel"])
+ax.grid()
+ax.set_ylabel("Discharge [$m^3/s$]")
+ax.set_xlabel("Time [$s$]")
 
 # %%

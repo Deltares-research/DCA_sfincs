@@ -20,7 +20,7 @@ setup_dep:
     - elevtn: Bathymetry_50x50m
 
 setup_mask_active:
-  mask: input/sfincs_domain.geojson
+  mask: c:/git/DCA_sfincs/02_scripts/input/sfincs_domain_reduced.geojson
   zmin: -5
   fill_area: 10
 

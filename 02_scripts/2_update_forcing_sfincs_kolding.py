@@ -14,7 +14,7 @@ from hydromt.log import setuplog
 from hydromt_sfincs import SfincsModel
 
 # %%
-sfincs_root = r"p:\11209905-dca-sfincs-river\01_models\KoldingA_PAK_sbg20_waterlevel_bound"
+sfincs_root = r"p:\11209905-dca-sfincs-river\01_models\reduced_region\kolding_river\riv_zb"
 
 logger = setuplog("update", "./hydromt.log", log_level=10)
 yml_file = join("setup_sfincs_kolding.yml")
@@ -41,7 +41,7 @@ mod.config.update(
 #Discharge
 
 mod.setup_discharge_forcing(timeseries= "river_discharges" ,
-                            locations= "river_discharge_locations" )
+                            locations= "river_discharge_locations_kolding" )
 
 # Waterlevel
 
@@ -56,5 +56,6 @@ mod.setup_observation_points(locations = "observation_locations", merge = False 
 # NOTE: the waterlevel forcing data is now stored in the sf.forcing dictionary
 mod.write()
 # %%
-mod.plot_basemap()
+mod.plot_basemap(fn_out= join(sfincs_root, "figs", "basemap.png"))
+mod.plot_forcing()
 # %%
