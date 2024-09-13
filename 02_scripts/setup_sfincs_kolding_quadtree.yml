@@ -9,9 +9,10 @@ setup_config:
   dthisout: 600
 
 setup_grid_from_region:
-  res: 25             
-  crs: utm
+  res: 25            
+  crs: 25832
   rotated: false
+  refinement_polygons: refinement_river
   
 setup_dep:
   datasets_dep:
@@ -24,7 +25,7 @@ setup_dep:
 #   fill_area: 10
 
 setup_mask_active:
-  mask: c:/git/DCA_sfincs/02_scripts/input/sfincs_domain_kolding.geojson
+  include_mask: c:/git/DCA_sfincs/02_scripts/input/sfincs_domain_kolding.geojson
   zmin: -20
   fill_area: 10
 
@@ -36,9 +37,9 @@ setup_manning_roughness:
   datasets_rgh:
       - manning: manning_roughness_5x5m
 
-setup_cn_infiltration:
-  cn: gcn250
-  antecedent_moisture: avg
+# setup_cn_infiltration:
+#   cn: gcn250
+#   antecedent_moisture: avg
   
 # setup_subgrid:
 #   datasets_dep:
@@ -46,12 +47,12 @@ setup_cn_infiltration:
 #     - elevtn: Bathymetry_50x50m
 #   datasets_rgh:
 #     - manning: manning_roughness_5x5m
-  # datasets_riv:
-  #   - centerlines: river_lines_kolding
-  #     mask: river_edges_kolding
-  #     rivdph: 3
-  #     manning: 0.035
-  # write_dep_tif: true
+#   datasets_riv:
+#     - centerlines: river_lines_kolding
+#       mask: river_edges_kolding
+#       rivdph: 3
+#       manning: 0.035
+#   write_dep_tif: true
 #   nr_subgrid_pixels: 5 # 5 m
 #   nbins: 10
 

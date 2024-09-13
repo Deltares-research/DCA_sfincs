@@ -48,11 +48,11 @@ for file_name in file_names:
 
 
 
-df_all.round(4).to_csv(os.path.join(base_dir, "pre_processed", f"discharge_all.txt" ),
-                                     header =  False, index = True)
+# df_all.round(4).to_csv(os.path.join(base_dir, "pre_processed", f"discharge_all.txt" ),
+#                                      header =  False, index = True)
 
-df_loc['Date'].to_csv(os.path.join(base_dir, "pre_processed", f"discharge_timeseries.txt" ),
-                                     header =  False, index = False)
+# df_loc['Date'].to_csv(os.path.join(base_dir, "pre_processed", f"discharge_timeseries.txt" ),
+#                                      header =  False, index = False)
 
 
 

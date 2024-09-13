@@ -81,6 +81,7 @@ river_discharges:
       header: null  # null translates to None in Python -> no header
       index_col: 0
       parse_dates: false
+      
 
 river_discharge_locations:
     crs: 25832
@@ -106,6 +107,18 @@ observation_locations:
     data_type: GeoDataFrame
     driver: vector
     path: geometries\observation_points.geojson
+
+refinement_river:
+    crs: 25832
+    data_type: GeoDataFrame
+    driver: vector
+    path: geometries\refinement_river.geojson
+
+bankfull_discharge_statistik:
+    crs: 25832
+    data_type: GeoDataFrame
+    driver: vector
+    path: Discharge_observations\bankfulldischarge_Statistiek_v2.geojson
 
 timeseries_discharge:
     data_type: DataFrame
