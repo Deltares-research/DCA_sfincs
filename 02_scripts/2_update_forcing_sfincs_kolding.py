@@ -14,7 +14,7 @@ from hydromt.log import setuplog
 from hydromt_sfincs import SfincsModel
 
 # %%
-sfincs_root = r"p:\11209905-dca-sfincs-river\01_models\reduced_region\kolding_river\riv_zb"
+sfincs_root = r"p:\11209905-dca-sfincs-river\01_models\reduced_single\kolding_river_10m\riv_zb"
 
 logger = setuplog("update", "./hydromt.log", log_level=10)
 yml_file = join("setup_sfincs_kolding.yml")

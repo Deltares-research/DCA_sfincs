@@ -9,7 +9,7 @@ setup_config:
   dthisout: 600
 
 setup_grid_from_region:
-  res: 25             
+  res: 10             
   crs: utm
   rotated: false
   
@@ -18,8 +18,13 @@ setup_dep:
     - elevtn: DEM_5x5m
     - elevtn: Bathymetry_50x50m
 
+# setup_mask_active:
+#   mask: c:/git/DCA_sfincs/02_scripts/input/sfincs_domain_reduced.geojson
+#   zmin: -20
+#   fill_area: 10
+
 setup_mask_active:
-  mask: c:/git/DCA_sfincs/02_scripts/input/sfincs_domain_reduced.geojson
+  mask: c:/git/DCA_sfincs/02_scripts/input/sfincs_domain_kolding.geojson
   zmin: -20
   fill_area: 10
 
