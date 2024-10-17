@@ -120,6 +120,12 @@ bankfull_discharge_statistik:
     driver: vector
     path: Discharge_observations\bankfulldischarge_Statistiek_v2.geojson
 
+bankfull_discharge_statistik2:
+    crs: 25832
+    data_type: GeoDataFrame
+    driver: vector
+    path: Discharge_observations\bankfulldischarge_Statistiek_v3.geojson
+
 timeseries_discharge:
     data_type: DataFrame
     driver: csv

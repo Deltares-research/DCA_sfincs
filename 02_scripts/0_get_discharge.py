@@ -44,7 +44,7 @@ for file_name in file_names:
     # Calculate the seconds since the start
     df_loc['TotalSeconds'] = (df_loc['Date'] - df_loc['Date'].min()).dt.total_seconds()
     df_loc.set_index('TotalSeconds', inplace =True, drop = True)
-    df_all = pd.concat([df_all, df_loc['Discharge']], axis = 1)
+    df_all = pd.concat([df_all, df_loc['Waterlevel']], axis = 1)
 
 
 
@@ -64,7 +64,7 @@ fig, ax = plt.subplots(1,1, figsize = (10,6))
 df_all.plot(ax = ax)
 ax.legend(["Kolding aa Ejstrup", "Seest Molleoe", "Vester nebel"])
 ax.grid()
-ax.set_ylabel("Discharge [$m^3/s$]")
-ax.set_xlabel("Time [$s$]")
+ax.set_ylabel("Waterlevel [m]")
+ax.set_xlabel("Time [s]")
 
 # %%
